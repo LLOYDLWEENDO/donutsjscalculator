@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mazuba's Just-In-Time Donuts</title>
+    <link rel="stylesheet" href="/resources/css/donuts.css">
+</head>
+
+<body>
+    <h1 style="text-align:
+ center; color:#13721b; padding-top:1%; background:#f8f5d5; padding-bottom:1%; "><img
+            src="./resources/images/simpsons-donut.png" width="60px"> <br>DONUTS ONLINE</h1>
+    <hr><br><br>
+    <div id="frame">
+        <h1 style="text-align: center; color:#fde5e5; ">Make an Order</h1><br>
+        <hr><br>
+        <form name="orderform" action="donuts.php" method="POST">
+            <div id="field">
+                <h3> Customer Name: <input type="text" id="buyerName" name="buyerName" onchange="updateOrder();" />
+                </h3>
+            </div>
+            <div id="field">
+                <h4 id="doughnutPrice"></h4>
+            </div>
+            <div id="field">
+                # of cake donuts: <input type="text" id="cakedonuts" name="cakedonuts" value="0"
+                    onchange="updateOrder();" />
+            </div>
+            <div id="field">
+                # of glazed donuts: <input type="text" id="glazeddonuts" name="glazeddonuts" value="0"
+                    onchange="updateOrder();" />
+            </div>
+            <br>
+            <hr><br>
+            <div id="field" class="special">
+                <div class="al">
+                    <hr />
+                    <h4 id="subtotal"></h4>
+                    <hr />
+                    <h4 id="tax"></h4>
+                    <hr />
+                    <h4 id="shipping"></h4>
+                    <hr />
+                    <h4 id="discount"></h4>
+                    <hr /><br />
+                    <h4 id="total"></h4><br />
+                </div>
+                    <hr />
+                    <h4 id="message"></h4>
+                    <hr />
+                    <br>
+            </div>
+
+        </form>
+    </div>
+    ...
+    <div class="field">
+        <input type="button" value="Show Total" onclick="updateOrder();" />
+    </div>
+    <script src="./resources/js/app.js"></script>
+</body>
+
+</html>
